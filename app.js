@@ -165,7 +165,7 @@ startBtn.addEventListener("click", ()=>{
     modal.style.display = "none"
     intervalId = setInterval(() => {
         render()
-    }, 400)
+    }, 300)
 
     // timeIntervalId = setInterval(() => {
     //     let [min, sec] = time.split("-").map(Number)
@@ -218,7 +218,7 @@ function restartGame(){
 
     intervalId = setInterval(() => {
         render()
-    }, 400)
+    }, 300)
 
     startTimer()
 
