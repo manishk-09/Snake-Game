@@ -44,6 +44,7 @@ for(let i=0;i<rows;i++){
 
     }
 }
+// generate Food 
 function generateFood(){
 
     let newFood;
@@ -60,6 +61,7 @@ function generateFood(){
 
 }
 let food = generateFood();
+// Rendering
 function render() {
 
     let head = null
@@ -107,7 +109,6 @@ function render() {
     }
 
     //Food Consume
-    // food Coordinates == snake head cooedinates
     if(head.x==food.x && head.y==food.y){
         blocks[`${food.x}-${food.y}`].classList.remove("food")
         food = generateFood();
@@ -142,7 +143,7 @@ function render() {
         }
     })
 }
-
+// Time 
 function startTimer(){
     clearInterval(timerIntervalId)
 
@@ -166,19 +167,6 @@ startBtn.addEventListener("click", ()=>{
     intervalId = setInterval(() => {
         render()
     }, 300)
-
-    // timeIntervalId = setInterval(() => {
-    //     let [min, sec] = time.split("-").map(Number)
-    //     if(sec==59){
-    //         min += 1
-    //         sec=0
-    //     }
-    //     else{
-    //         sec += 1
-    //     }
-    //     time = `${min}-${sec}`
-    //     timeElement.innerText = time
-    // },1000)
 
     minutes = 0;
     seconds = 0;
@@ -225,7 +213,7 @@ function restartGame(){
 
 }
 
-
+// Key Press
 
 addEventListener("keydown", (event) => {
 
